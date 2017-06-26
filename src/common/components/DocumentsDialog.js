@@ -16,23 +16,27 @@ class DocumentsDialog extends React.Component {
     this.setState({active: !this.state.active});
   }
 
+  handleDocumentNameChange = val => this.setState({name: val})
+
   actions = [
     { label: "Done", onClick: this.handleToggle },
   ]
 
   render () {
+    const { active, name } = this.state
+
     return (
       <div>
         <Button label='Documents' onClick={this.handleToggle} />
         <Dialog
           actions={this.actions}
-          active={this.state.active}
+          active={active}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
           title='Documents'
         >
           <div>
-            <Input type='text' label='Name' name='name' value={this.state.name} onChange={(val) => this.setState({name: val})} maxLength={16 } />
+            <Input type='text' label='Name' name='name' value={name} onChange={this.handleDocumentNameChange} maxLength={16 } />
             <Button label='Add document' raised primary />
           </div>
           <div style={{

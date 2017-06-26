@@ -7,7 +7,7 @@ import ListDocuments from './ListDocuments'
 export default props => (
   <div>
     <div>
-      <Input type='text' label='Name' name='name' value={"this.state.name"} maxLength={16 } />
+      <Input type='text' label='Name' name='name' maxLength={16} />
       <Input type='file' />
       <Button label='Add document' raised primary />
     </div>

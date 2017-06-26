@@ -6,12 +6,12 @@ const listItemActions = [
   <FontIcon key="abc" value='delete' onClick={() => console.log("delete")} />
 ]
 
-export default props => (
+const ListDocuments = props => (
   <List>
     <ListSubHeader caption='Plr #123' />
     <ListItem
       avatar='https://dl.dropboxusercontent.com/u/2247264/assets/m.jpg'
-      caption='SOmething.pdf'
+      caption='Something.pdf'
       rightActions={listItemActions}
       onClick={() => console.log("open doc")}
     />
@@ -29,3 +29,5 @@ export default props => (
     />
   </List>
 )
+
+export default ListDocuments

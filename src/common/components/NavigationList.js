@@ -4,15 +4,9 @@ import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-
 const NavigationList = props => (
   <List selectable ripple>
     <ListSubHeader caption='Pages' />
-    <ListItem
-      caption='Dr. Manhattan'
-    />
-    <ListItem
-      caption='Ozymandias'
-    />
-    <ListItem
-      caption='Rorschach'
-    />
+    <ListItem caption='Dr. Manhattan' />
+    <ListItem caption='Ozymandias' />
+    <ListItem caption='Rorschach' />
   </List>
 )
 

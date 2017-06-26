@@ -1,29 +1,27 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 const settings = {
   entry: './src/client/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public')
+    path: path.resolve(__dirname, 'public'),
+    publicPath: path.resolve(__dirname, 'public')
   },
   resolve: {
     extensions: [".js", ".json", ".css"]
   },
-  devtool: "eval-source-map",
   module: {
     rules: [
       {
         test: /\.js?$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         options: {
           presets: [
             ["es2015", { modules: false }],
             "stage-0",
             "react"
-          ],
-          plugins: [
-            "transform-node-env-inline"
           ]
         }
       },
@@ -46,7 +44,7 @@ const settings = {
     ]
   },
   devServer: {
-    contentBase: path.resolve("src/www"),
+    contentBase: path.resolve(__dirname, 'public'),
     publicPath: "http://localhost:8080/", // full URL is necessary for Hot Module Replacement if additional path will be added.
     quiet: false,
     hot: true,
@@ -58,8 +56,8 @@ const settings = {
     new webpack.NamedModulesPlugin(),
     new webpack.LoaderOptionsPlugin({
       debug: true
-    }),
-  ],
-};
+    })
+  ]
+}
 
-module.exports = settings;
+module.exports = settings
