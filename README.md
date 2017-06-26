@@ -12,7 +12,7 @@
 
 ## Built With
 
-* [react toolbox](https://facebook.github.io/react/)
+* [react](https://facebook.github.io/react/)
 * [react toolbox](http://react-toolbox.com/)
 * [webpack 2](https://webpack.js.org/)
 * [postcss](http://postcss.org/)
