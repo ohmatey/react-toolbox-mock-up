@@ -16,4 +16,4 @@
 * [react toolbox](http://react-toolbox.com/)
 * [webpack 2](https://webpack.js.org/)
 * [postcss](http://postcss.org/)
-* [postcss](https://babeljs.io/)
+* [babel](https://babeljs.io/)
